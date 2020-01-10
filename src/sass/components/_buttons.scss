@@ -1,0 +1,14 @@
+.btn {
+    color: $color-white;
+    border: none;
+    background-color: $color-dark-2;
+    padding: .7rem 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 200ms;
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-dark;
+    }
+}

@@ -1,0 +1,66 @@
+.todos {
+    width: 50%;
+    background-color: $color-white;
+ 
+    box-shadow: 2px 2px 1rem 0 rgba(0, 0, 0, .2);
+
+    &__header {
+        display: flex;
+        align-items: center;
+        padding-left: 2rem;
+        background-color: $color-primary;
+        width: 100%;
+
+        & h1 {
+            color: $color-white;
+        }
+
+        & h2 {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 1.25rem;
+            color: $color-white;
+        }
+    }
+
+    &__controls {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__control {
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: $color-dark-2;
+        transition: all 200ms;
+
+        &:hover {
+            background-color: #080;
+        }
+
+        &:not(:last-child) {
+            border-right: 2px solid $color-white;
+        }
+    }
+
+    &__icon {
+        margin-right: .7rem;
+        width: 2rem;
+        height: 2rem;
+        fill: $color-white;
+    }
+
+    &__content {
+        height: 80vh;
+        padding: 2rem;
+        overflow-y: scroll;
+    }
+}
+
+.control-enabled {
+    background-color: #080;
+}

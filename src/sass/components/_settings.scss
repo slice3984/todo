@@ -1,0 +1,45 @@
+.settings-modal {
+    animation: fade-in 500ms ease-in;
+
+    &__content {
+        margin: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__group {
+        margin-right: 2rem;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        & h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: .5rem;
+        }
+
+        & .btn {
+            font-size: 1.5rem;
+        }
+    }
+
+    & input {
+        display: none;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.hide-settings {
+    display: none;
+}

@@ -1,0 +1,20 @@
+.popup {
+    margin: 1rem 0;
+    padding: .5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-dark-2;
+    color: $color-white;
+
+    & h2 {
+        display: inline-block;
+    }
+
+    & svg {
+        width: 2rem;
+        height: 2rem;
+        fill: $color-white;
+        margin-right: .5rem;
+    }
+}

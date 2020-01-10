@@ -1,0 +1,37 @@
+.header {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    background: linear-gradient(to bottom, #00adb5, #0d868b);
+    color: $color-white;
+    box-shadow: 1px 1px 1rem 1px rgba(0, 0, 0, .3);
+
+    &__content {
+        padding: 5px 1rem;
+        display: flex;
+    }
+
+    &__icon {
+        height: 3rem;
+        width: 3rem;
+        margin-left: .5rem;
+        fill: $color-white;
+        stroke: $color-dark-2;
+        animation: rotate 20s linear infinite;
+        cursor: pointer;
+
+        &:hover {
+            animation: rotate 15s linear infinite;
+        }
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}

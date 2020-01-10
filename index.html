@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="src/ts/main.ts" defer></script>
+    <link rel="stylesheet" href="src/sass/main.scss">
+    <title>Todo App</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__content">
+            <h1 class="heading-large">todo app</h1>
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="header__icon" id="open-settings">
+                <use xlink:href="img/sprite.svg#icon-settings"></use>
+            </svg>
+        </div>
+    </header>
+    <div class="main">
+        <div class="settings-modal hide-settings" id="settings-modal">
+            <div class="settings-modal__content">
+                <div class="settings-modal__group">
+                    <h3>Delete all todos</h3>
+                    <a href="#" class="btn" id="delete-todos">Delete</a>
+                </div>
+                <div class="settings-modal__group">
+                    <h3>Export todos</h3>
+                    <a href="#" class="btn" id="export-todos">Export</a>
+                </div>
+                <div class="settings-modal__group">
+                    <h3>Import todos</h3>
+                    <input type="file" name="" id="import-todos">
+                    <label id="import-todos" class="btn" for="import-todos">Import</label>
+                </div>
+            </div>
+        </div>
+        <div class="edit-modal" id="edit-modal">
+            <div class="edit-modal__content">
+                <h3></h3>
+                <div class="edit-modal__form">
+                    <form action="#">
+                        <label for="edit-title">Title</label>
+                        <input type="text" name="" id="edit-title">
+
+                        <label for="edit-start-date">Start</label>
+                        <input type="date" name="" id="edit-start-date">
+
+                        <label for="edit-end-date">End</label>
+                        <input type="date" name="" id="edit-end-date">
+
+                        <label for="edit-todo">Todo</label>
+                        <textarea name="" id="edit-todo"></textarea>
+
+                        <div class="edit-modal__buttons">
+                            <input type="submit" value="Save" id="edit-submit" class="btn">
+                            <button class="btn" type="button">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="main__content">
+            <div class="create">
+                <div class="create__heading">
+                    <h1 class="heading-medium">create todo</h1>
+                </div>
+                <div class="create__content">
+                    <form id="add-todo-form" action="#">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" name="" id="title">
+                        </div>
+                        <div class="form-group">
+                            <label>Start and end date</label>
+                            <div class="create__dates">
+                                <input id="date-start" type="date" name="" id="">
+                                <input id="date-end" type="date" name="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="task">Task</label>
+                            <textarea name="" id="task"></textarea>
+                        </div>
+                        <div class="create__buttons">
+                            <input type="submit" value="Create" class="btn">
+                            <input type="reset" value="Clear" class="btn">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="todos">
+                <div class="todos__header">
+                    <h1 class="heading-medium">todos</h1>
+                    <div class="todos__controls">
+                        <div class="todos__control" id="sort-by-due">
+                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="todos__icon">
+                                <use xlink:href="img/sprite.svg#icon-alarm"></use>
+                            </svg>
+                            <h2>Sort by due date</h2>
+                        </div>
+                        <div class="todos__control" id="hide-finished">
+                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="todos__icon">
+                                <use xlink:href="img/sprite.svg#icon-finished"></use>
+                            </svg>
+                            <h2>Don't show finished todos</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="todos__content">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

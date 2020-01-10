@@ -1,0 +1,73 @@
+.todo {
+    width: 100%;
+    margin-bottom: 2.5rem;
+
+    & h3 {
+        display: inline-block;
+        font-size: 1.25rem;
+    }
+
+    &__header {
+        font-weight: bold;
+        font-size: 1.25rem;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem .5rem;
+        color: $color-white;
+        background-color: $color-dark;
+    }
+
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: $color-white;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: .5rem;
+        }
+
+        &-done {
+            &:hover {
+                fill: #080;
+            }
+        }
+
+        &-edit {
+            &:hover {
+                fill: #fa5;
+            }
+        }
+
+        &-delete {
+            &:hover {
+                fill: #f00;
+            }
+        }
+    }
+
+    &__controls {
+        
+    }
+
+    &__content {
+        height: 10rem;
+        padding: 1rem;
+        font-size: 1.25rem;
+        background-color: #fff;
+    }
+}
+
+.selected-finished {
+   fill: #080;
+}
+
+.todo-finished {
+    background-color: rgba(0, 255, 0, .1);
+}
+
+.todo-failed {
+    background-color: rgba(255, 0, 0, .1);
+}

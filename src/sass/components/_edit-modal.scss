@@ -1,0 +1,73 @@
+.edit-modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .3);
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 35rem;
+        background-color: $color-white;
+        border-radius: 3px;
+        box-shadow: 1px 3px 1rem 0 rgba(0, 0, 0, .2);
+
+
+        & h3 {
+            font-size: 2rem;
+            font-weight: lighter;
+            text-align: left;
+            padding: 1rem;
+            color: $color-white;
+            background-color: $color-primary;
+        }
+    }
+
+    &__form {
+        text-align: center;
+        padding: 2rem;
+
+        & input[type="text"],
+        & input[type="date"],
+        & textarea {
+            width: 100%;
+            padding: .7rem;
+            font-size: 1.5rem;
+            border: none;
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        & textarea {
+            height: 12rem;
+            resize: none;
+        }
+
+        & label {
+            display: block;
+            padding-bottom: .5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        & input[type="submit"],
+        & button {
+            font-size: 1.75rem;
+            width: 45%;
+        }
+    }
+
+    &__buttons {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}
